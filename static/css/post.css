@@ -1,0 +1,120 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgreen; /* Light gray background for the whole page */
+    color: #212529; /* Dark text color for better readability */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Alert message styling */
+  .alert {
+    margin: 1rem auto; /* Center the alert with margin */
+    max-width: 800px; /* Limit the width of the alert */
+  }
+  
+  /* Post container styling */
+  .shadow {
+    background-color: #ffffff; /* White background for the post container */
+    border-radius: 0.375rem; /* Rounded corners */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow */
+    padding: 1.5rem; /* Padding inside the container */
+    max-width: 800px; /* Maximum width of the container */
+    margin: 2rem auto; /* Center-align the container */
+  }
+  
+  /* Post title styling */
+  h2 {
+    font-family: 'Georgia', serif; /* Serif font for the title */
+    font-size: 2rem; /* Larger font size for the title */
+    font-weight: bold;
+    color: #343a40; /* Darker color for the title */
+    margin-bottom: 1rem; /* Space below the title */
+  }
+  
+  /* Post metadata styling */
+  small {
+    color: #6c757d; /* Light gray color for metadata */
+    display: block; /* Display metadata on a new line */
+    margin-bottom: 1rem; /* Space below metadata */
+  }
+  
+  /* Content styling */
+  .post-content {
+    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 2rem; /* Space below the content */
+  }
+  
+  /* Card styling for author information */
+  .card {
+    margin-top: 1rem; /* Space above the card */
+    border: 1px solid #ced4da; /* Light border for the card */
+    border-radius: 0.375rem; /* Rounded corners */
+  }
+  
+  /* Author profile picture styling */
+  .card-img {
+    border-radius: 0.375rem 0 0 0.375rem; /* Rounded top-left corners */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+  }
+  
+  /* Card body styling */
+  .card-body {
+    padding: 1rem; /* Padding inside the card body */
+  }
+  
+  /* Card title styling */
+  .card-title {
+    font-size: 1.25rem; /* Larger font size for card title */
+    font-weight: bold; /* Bold title */
+    color: #343a40; /* Dark color for the title */
+  }
+  
+  /* Card text styling */
+  .card-text {
+    color: #495057; /* Dark gray color for the text */
+    font-size: 1rem; /* Standard font size for text */
+  }
+  
+  /* Button styling */
+  .btn-outline-secondary {
+    border-color: #6c757d; /* Border color */
+    color: #6c757d; /* Text color */
+    padding: 0.5rem 1rem; /* Padding inside the button */
+    border-radius: 0.375rem; /* Rounded corners */
+  }
+  
+  .btn-outline-secondary:hover {
+    background-color: #6c757d; /* Darker background on hover */
+    color: #ffffff; /* White text color on hover */
+  }
+  
+  .btn-outline-danger {
+    border-color: #dc3545; /* Border color for danger button */
+    color: #dc3545; /* Text color for danger button */
+    padding: 0.5rem 1rem; /* Padding inside the button */
+    border-radius: 0.375rem; /* Rounded corners */
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #dc3545; /* Darker background on hover */
+    color: #ffffff; /* White text color on hover */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .shadow {
+      padding: 1rem; /* Reduce padding on smaller screens */
+      margin: 1rem; /* Add margin for smaller screens */
+    }
+  
+    .card-img {
+      width: 100%; /* Ensure image takes full width */
+    }
+  
+    .btn-outline-secondary, .btn-outline-danger {
+      font-size: 0.875rem; /* Smaller font size for buttons */
+      padding: 0.5rem; /* Adjust padding for smaller buttons */
+    }
+  }
+  

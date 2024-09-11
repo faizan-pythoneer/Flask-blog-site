@@ -1,0 +1,215 @@
+/* Reset default margin and padding for consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body takes up the full height and centers content */
+body {
+    background: linear-gradient(to right, cyan, rgb(201,33,181));
+    background-blend-mode: overlay;
+    color: #333; /* Darker text color for better readability */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif; /* Default font family */
+}
+
+/* Navbar styling */
+nav.navbar {
+    position: fixed; /* Fixes the navbar to the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    background-color: white; /* Background color for the navbar */
+    border-bottom: 1px solid #dee2e6; /* Bottom border for separation */
+    z-index: 1030; /* Ensure it’s above other content */
+    padding: 0.5rem 1rem; /* Padding inside the navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a subtle effect */
+}
+
+/* Flash message styling */
+.alert {
+    position: absolute; /* Fixed to viewport */
+    top: 70px; /* Adjust this value to be below the navbar */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    padding: 10px; /* Padding inside alert */
+    border-radius: 20px; /* Rounded corners for alerts */
+    font-size: 0.875rem; /* Font size */
+    width: 300px; /* Fixed width to match design */
+    max-width: 80%; /* Responsive max width */
+    text-align: center; /* Center align text in alert */
+    z-index: 1020; /* Ensure it's below the navbar but above other content */
+}
+
+.alert-warning {
+    background-color: #f8d7da; /* Light red background for warnings */
+    color: #721c24; /* Dark red text for warnings */
+    border: 1px solid #f5c6cb; /* Light red border */
+}
+
+.alert-dismissible .btn-close {
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: inherit;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.alert-dismissible .btn-close:hover {
+    opacity: .75;
+}
+
+/* Ensure styles are scoped to login page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    flex-direction: column; /* Stack items vertically */
+    margin-top: 70px; /* Adjust to account for navbar height */
+}
+
+/* Form container styling */
+.shadow {
+    background-color: white; /* White background for form container */
+    padding: 20px;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 30%;
+    max-width: 500px; /* Max width for larger screens */
+}
+
+/* Form styling */
+#login-form {
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Maximum width of the form */
+    height: 450px;
+    position: relative; /* Ensure it’s the positioning context for alerts */
+}
+
+#login-form h1 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#login-form .form-label {
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#login-form .form-control {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 0.875rem;
+    background-color: white;
+    color: black;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+#login-form .form-control:focus {
+    border-color: black;
+    outline: none;
+    box-shadow: none;
+}
+
+#login-form .btn-primary {
+    background: linear-gradient(to right, cyan, rgb(201,33,181));
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 90%;
+    margin-top: 30px;
+    border: none;
+}
+
+/* Submit button */
+.btn-secondary {
+    background-color: black; /* Default background color */
+    border-color: #6c757d; /* Border color */
+    color: #ffffff; /* White text color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 0.75rem; /* Padding */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+    width: 90%; /* Full width of the container */
+    border: none; /* No border */
+    margin: 15px;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(to right, yellow, rgb(185, 64, 171));
+}
+
+/* Table styling */
+.table {
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    text-align: center; /* Center align text in table */
+    vertical-align: middle; /* Center align vertically */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.table-bordered {
+    border: 1px solid #ddd; /* Light gray border for table */
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid #ddd; /* Border for table cells */
+}
+
+/* Navbar search form styling */
+.navbar .form-control {
+    border: 1px solid black; /* Consistent border color */
+    border-radius: 10px; /* Rounded corners to match button */
+    padding: 0.5rem; /* Padding for better usability */
+    font-size: 0.875rem; /* Font size to match other inputs */
+    color: black; /* Text color */
+    background-color: white; /* Background color to match other form controls */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.navbar .form-control:focus {
+    border-color: black; /* Border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.navbar .btn-outline-secondary {
+    border-radius: 10px; /* Rounded corners for a modern look */
+    padding: 0.5rem 1rem; /* Adjusted padding for balance */
+    font-size: 0.87rem; /* Font size to match input */
+    color: black; /* Text color */
+    background-color: white; /* Background color */
+    border: 1px solid black; /* Border color for visibility */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text */
+    width: auto; /* Adjust width to fit content */
+    margin-block: 5px;
+    position: relative; /* Position relative to its container */
+}
+
+.navbar .btn-outline-secondary:hover {
+    background-color: blue; /* Dark background on hover */
+    color: white; /* White text on hover */
+}

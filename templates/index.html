@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="container p-3 mb-5 grid-container">
+        <div class="text-content">
+            <div class="h1-wrapper">
+                <h1>Make your side hustle </br>your main hustle</h1>
+            </div>
+            <p>Passionate web developer with a keen eye for design and</br>  a focus on
+            creating user-centric digital experiences.</br> Skilled in front-end and back-end 
+            technologies, </br>dedicated to delivering high-quality, </br>responsive web solutions.</p>
+        </div>
+        <img src="{{ url_for('static', filename='images/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.webp') }}" alt="Description of image" class="img-fluid img-right">
+    </div>
+{% endblock %}

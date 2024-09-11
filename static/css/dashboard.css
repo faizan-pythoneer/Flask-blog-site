@@ -1,0 +1,95 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: pink; /* Light background for better readability */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Alert message styling */
+  .alert {
+    margin: 1rem 0;
+  }
+  
+  /* Card styling */
+  .card {
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 0.375rem; /* Rounded corners */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow */
+    margin-bottom: 1.5rem; /* Space below the card */
+    background-color: #ffffff; /* White background */
+  }
+  
+  .card-header {
+    background-color: #e9ecef; /* Light background for the header */
+    font-weight: bold; /* Bold header text */
+    font-size: 1.25rem; /* Slightly larger text */
+  }
+  
+  .card-body {
+    padding: 1.5rem; /* Padding inside the card body */
+  }
+  
+  /* Button styling */
+  .btn-secondary {
+    background-color: #6c757d; /* Secondary button color */
+    border-color: #6c757d; /* Border color for secondary button */
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268; /* Darker shade on hover */
+    border-color: #545b62; /* Darker border color on hover */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Danger button color */
+    border-color: #dc3545; /* Border color for danger button */
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333; /* Darker shade on hover */
+    border-color: #bd2130; /* Darker border color on hover */
+  }
+  
+  /* Form styling */
+  .form-label {
+    font-weight: bold; /* Bold label text */
+    color: #212529; /* Dark color for labels */
+  }
+  
+  .form-control {
+    border-radius: 0.375rem; /* Rounded corners */
+    border: 1px solid #ced4da; /* Light border */
+    padding: 0.5rem; /* Padding inside the input */
+    margin-bottom: 1rem; /* Space below the input */
+  }
+  
+  /* Textarea styling */
+  textarea.form-control {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px; /* Set a minimum height */
+  }
+  
+  /* Profile picture styling */
+  img {
+    border-radius: 0.375rem; /* Rounded corners for profile pic */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column; /* Stack columns vertically on small screens */
+    }
+    
+    .col-8, .col-4 {
+      width: 100%; /* Full width for columns on small screens */
+    }
+    
+    img {
+      width: 100%; /* Responsive width for images */
+      height: auto; /* Maintain aspect ratio */
+    }
+  }
+  

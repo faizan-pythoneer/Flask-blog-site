@@ -1,0 +1,209 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(228, 207, 19); /* Body background color */
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(228, 207, 19) !important;
+  z-index: 1030;
+  padding: 0.5rem 1rem;
+}
+
+/* Ensure text color inside navbar is black */
+.navbar a,
+.navbar h1, 
+.navbar .form-control, 
+.navbar .btn-outline-secondary {
+  color: black !important;
+}
+
+/* Form control styling */
+.navbar .form-control {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  background-color: rgb(228, 207, 19);
+  transition: border-color 0.3s ease;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.navbar .form-control:focus {
+  border-color: black;
+  outline: none;
+}
+
+/* Button styling */
+.navbar .btn-outline-secondary {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.87rem;
+  color: black;
+  background-color: rgb(228, 207, 19);
+  border: 1px solid black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: auto;
+  margin-block: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Icon inside the button */
+.navbar .btn-outline-secondary i {
+  font-size: 1.2rem; /* Adjust icon size */
+  margin-right: 0.5rem; /* Space between icon and text */
+}
+
+.navbar .btn-outline-secondary:hover {
+  background-color: rgb(228, 207, 19) !important;
+  color: white !important;
+  border-color: rgb(228, 207, 19) !important;
+}
+
+/* Heading styling */
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-top: 100px;
+  margin-bottom: 2rem;
+  margin-left: 10px;
+}
+
+/* Paragraph styling */
+p {  
+  margin-left: 70px;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Specific styling for Navbar Brand */
+.navbar-brand {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.50rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Hover effect for Navbar Brand */
+.navbar-brand:hover {
+  color: black !important; /* Change color on hover */
+  text-decoration: underline;
+}
+
+/* Specific styling for Navbar Links */
+.nav-link {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: blue; /* Default color for links */
+  text-decoration: none; /* Remove the default underline */
+}
+
+/* Hover effect for Navbar Links */
+.navbar-nav .nav-link:hover {
+  color: rgb(10, 10, 231) !important; /* Change text color on hover */
+  border-bottom: 2px solid rgb(228, 207, 19) !important; /* Add underline on hover */
+  padding-bottom: 0.2rem; /* Adjust padding to ensure underline stays visible */
+  background-color: transparent; /* Ensure background is transparent on hover */
+}
+
+/* Grid container styling */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 20px; /* Space between grid items */
+  align-items: center; /* Center items vertically */
+  margin-top: 120px;
+}
+
+/* Basic styling for image */
+.img-right {
+  width: 85%; /* Adjust width as needed */
+  max-width: 600%; /* Limit maximum width to container width */
+  height: 400px; /* Set initial height */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  animation: expand-fwd 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) both; /* ease-out-back effect */
+}
+
+/* Hover effect for image */
+.img-right:hover {
+  transform: scale(1.2) translateY(-15px) rotate(10deg); /* Increased scale, vertical move, and rotation */
+  box-shadow: 40px 40px rgba(0, 0, 0, 0.3); /* More pronounced shadow effect */
+}
+
+/* Basic styling for text content */
+.text-content {
+  grid-column: 1; /* Text content in the first column */
+}
+
+/* Animation wrapper */
+.h1-wrapper {
+  position: relative;
+  margin-left: 70px; /* Ensure proper alignment */
+  overflow: hidden; /* Ensure the animation stays within bounds */
+  will-change: transform, opacity; /* Hint for better performance */
+}
+
+/* Animation definition */
+@-webkit-keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: normal; /* Adjust to fit your design */
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: normal; /* Adjust to fit your design */
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.h1-wrapper h1 {
+  animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/* Expand forward animation for image */
+@keyframes expand-fwd {
+  0% {
+    transform: scale(0.8); /* Start from smaller size */
+    opacity: 0; /* Make it invisible initially */
+  }
+  100% {
+    transform: scale(1); /* End at original size */
+    opacity: 1; /* Make it fully visible */
+  }
+}
